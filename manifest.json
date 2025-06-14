@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Block YouTube in Incognito",
+  "version": "1.0",
+  "description": "Blocks YouTube only in Incognito mode",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "tabs"
+  ],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "incognito": "split"
+}
